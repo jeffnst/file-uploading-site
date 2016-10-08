@@ -1,5 +1,4 @@
-TODO: modify entirely to serve as a single web file transfer pagefor a LAN, plus some optional system housekeeping operations via CGI (in Perl Catalyst or PHP CodeIgniter & Lighttpd or Nginx). Dragndrop, wakeonlan.
-Find all empty dirs under / and delete em.
+TODO
 
-
-CSS need serious refactoring.
+- modify entirely to serve as a single web-page for housekeeping operations via CGI (in CodeIgniter/Catalyst/Django & Lighttpd), i.e. find all empty dirs under / and delete em.
+- CSS need serious refactoring.
