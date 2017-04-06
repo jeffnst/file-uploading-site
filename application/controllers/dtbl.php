@@ -1,4 +1,8 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+/* TODO: remove relative paths
+ *
+ */
 
 class Dtbl extends CI_Controller {
 
@@ -18,12 +22,9 @@ class Dtbl extends CI_Controller {
 		}
 			
 	}
-	
-	
 	function read() {
 		echo json_encode( $this->File_m->getAll() );
 	}
-	
 	function add(){
 		$fdata = array(
 		  	 'name'=>$this->input->post('name'),
@@ -33,21 +34,15 @@ class Dtbl extends CI_Controller {
 		  	 );
 		$this->File_m->add($fdata);
 		}
-	
-	
 	function getById( $fid ) {
 		if( isset( $fid ) )
 			echo json_encode( $this->File_m->getById( $fid ) );
 	}
-	
-
-
 	function delete( $fid) {
 	
 		$fdel = $this->File_m->delete($fid);		
 		unlink('../uploads/'.$fdel);
 	}
-	
 	function download($fid){
 	
 		$foo = $this->File_m->down($fid);

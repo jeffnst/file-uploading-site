@@ -1,4 +1,8 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+/* TODO: more desriptive function naming
+ *
+ */
 
 class User_model extends CI_Model {
 
@@ -11,10 +15,8 @@ class User_model extends CI_Model {
 		if($query->num_rows == 1)
 		{
 			return true;
-		}
-		
+		}		
 	}
-	
 	function create_user()
 	{
 		
@@ -29,7 +31,6 @@ class User_model extends CI_Model {
 		$insert = $this->db->insert('users', $new_member_insert_data);
 		return $insert;
 	}
-	
 	function update_user()
 	{		 
 		$new_details = array(
@@ -39,12 +40,11 @@ class User_model extends CI_Model {
 			$this->db->where('username',$this->session->userdata('username'));
 			$this->db->update('users',$new_details); 
 	}
-	
 	function update_pswd()
 	{	
 		$new_pswd = array('password'=> md5($this->input->post('password')));
 		$this->db->where('username',$this->session->userdata('username'));
 		$this->db->update('users',$new_pswd); 
 	}
-	
+
 }

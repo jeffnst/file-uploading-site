@@ -1,5 +1,8 @@
 TODO
 
-- modify entirely to serve as a single web-page for housekeeping operations via CGI (in CodeIgniter/Catalyst/Django & Lighttpd), i.e. find all empty dirs under / and delete em.
-- CSS need serious refactoring.
-- move to a most lightweight NoRel dbms
+- add live updates panel
+- add CSS preprocessor
+- move to a most lightweight NoRel dbms (no need for MySQL here)
+- topbar: make a single topbar and add ajax
+- add html validation tags to all views
+- datatable view fix completely

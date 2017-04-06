@@ -1,4 +1,4 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
 Uploadify v3.1.0
 Copyright (c) 2012 Reactive Apps, Ronnie Garcia
